@@ -13,6 +13,24 @@
    npm run dev
    ```
 
+## Configuración del archivo .env
+
+Crea un archivo llamado `.env` en la raíz del proyecto y agrega las siguientes variables con tus propios valores:
+
+```env
+DB_HOST=localhost
+DB_USER=tu_usuario_mysql
+DB_PASSWORD=tu_contraseña_mysql
+DB_NAME=nombre_de_tu_base_de_datos
+
+JWT_SECRET=un_secreto_muy_seguro
+JWT_REFRESH_SECRET=otro_secreto_muy_seguro
+
+PORT=3000
+```
+
+> ⚠️ **Importante:** No subas el archivo `.env` a tu repositorio, ya que contiene información sensible.
+
 ## Endpoints principales
 
 - POST `/api/auth/register` - Registro de usuario
