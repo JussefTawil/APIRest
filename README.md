@@ -31,6 +31,19 @@ PORT=3000
 
 > ⚠️ **Importante:** No subas el archivo `.env` a tu repositorio, ya que contiene información sensible.
 
+## Instrucciones para crear la base de datos MySQL
+
+Antes de iniciar el servidor, asegúrate de crear la base de datos y el usuario en MySQL. Puedes usar el siguiente ejemplo:
+
+```sql
+CREATE DATABASE nombre_de_tu_base_de_datos;
+CREATE USER 'tu_usuario_mysql'@'localhost' IDENTIFIED BY 'tu_contraseña_mysql';
+GRANT ALL PRIVILEGES ON nombre_de_tu_base_de_datos.* TO 'tu_usuario_mysql'@'localhost';
+FLUSH PRIVILEGES;
+```
+
+Asegúrate de reemplazar los valores por los que usas en tu archivo `.env`.
+
 ## Endpoints principales
 
 - POST `/api/auth/register` - Registro de usuario
